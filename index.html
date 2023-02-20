@@ -1,0 +1,971 @@
+<style> 
+.hidden {
+    display: none;
+}
+.width input {
+    max-width: 97%;
+    height: 50px;
+}
+.center2 {
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+    width: 200px;
+}
+.upload2 button {
+    margin-top: 20px;
+    background: #ec008c;
+    border-radius: 20px;
+    height: 50px;
+
+    width: 100%;
+
+    color: #ffffff;
+}
+.mg {
+    width: 295px;
+}
+.mg1 {
+    margin-left: 50px;
+}
+.mg2 {
+    margin-left: 150px;
+}
+.mg3 {
+    margin-left: 130px;
+}
+.mg4 {
+    margin-left: 85px;
+}
+.mg5 {
+    margin-left: 139px;
+}
+.margin-left2 {
+    margin-left: 30px;
+}
+.margin-left {
+    margin-left: 30px;
+}
+.margin-left-mini {
+    margin-left: 15px;
+}
+.middle {
+    margin-top: 30px;
+}
+.question2-3 {
+    min-width: 208px;
+}
+.checkbox1-3 {
+    margin-top: 35px;
+}
+.checkbox1 {
+    margin-left: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -20px;
+}
+.radio2-1 {
+    display: flex;
+    flex-direction: column;
+}
+.radio2 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.radio {
+    padding: 25px;
+    display: flex;
+}
+.flex {
+    display: flex;
+}
+.width5 input {
+    width: 550px;
+    height: 50px;
+}
+.right {
+    margin-left: 20px;
+}
+.question1-1left3 input {
+    width: 1240px;
+}
+.question1-2left input {
+    width: 295px;
+    height: 50px;
+}
+.question1-1left1 input {
+    width: 510px;
+    height: 50px;
+}
+.question1-1left input {
+    width: 610px;
+    height: 50px;
+}
+.star::before {
+    position: absolute;
+    color: #e32;
+    content: " *";
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.text3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    margin-top: 40px;
+    align: justify;
+    color: #000000;
+}
+.text2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+.text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+.question {
+    margin-top: 30px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+    color: #000000;
+}
+.upload3 button {
+    margin-top: 20px;
+    background: #c4c4c4;
+    border-radius: 20px;
+    height: 50px;
+
+    min-width: 250px;
+}
+.upload button {
+    margin-top: 20px;
+    background: #c4c4c4;
+    border-radius: 20px;
+    height: 40px;
+
+    width: 100%;
+}
+.question1-2right {
+    max-width: 400px;
+}
+.title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+    margin-top: 29px;
+}
+.icon {
+    text-align: center;
+}
+.border input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0);
+    outline: 0;
+}
+.question1-1 {
+    display: flex;
+}
+
+.border input::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.65);
+    text-overflow: ellipsis;
+}
+.border input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0);
+    outline: 0;
+}
+.question1-1 {
+    display: flex;
+}
+
+.border input::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.65);
+    text-overflow: ellipsis;
+}
+.all {
+    max-width: 1240px;
+    margin: auto;
+}
+input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+/* Базовые стили слоя, затемнения и модального окна */
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    /* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.65);
+
+    cursor: default; /* тип курсора */
+}
+
+/* активируем слой затемнения */
+.overlay:target {
+    display: block;
+}
+
+/* стили модального окна */
+.popup {
+    top: -100%;
+    right: 0;
+    left: 50%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    min-width: 950px;
+    max-width: 950px;
+    /* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    background: #fefefe;
+    /* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px "Tahoma", Arial, sans-serif;
+    /* внешняя тень */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+
+/* активируем модальный блок */
+.overlay:target + .popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 5%;
+}
+
+/* формируем кнопку закрытия */
+.close {
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/20px "Tahoma", Arial, sans-serif;
+    font-weight: bold;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    -ms-transition: all ease 0.8s;
+    -o-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+}
+
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.minWidth {
+    display: none;
+}
+.phone {
+    display: none;
+}
+.maxxwidth {
+    max-width: 97%;
+}
+@media (min-width: 952px) and (max-width: 1302px) {
+    .question1-1left input {
+        width: 340px;
+    }
+
+    .maxWidth {
+        display: none;
+    }
+    .minWidth {
+        display: inline;
+    }
+    .width input {
+        width: 97%;
+        height: 50px;
+    }
+    .phone {
+        display: none;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 951px) {
+    .question1-1left input {
+        width: 300px;
+    }
+
+    .maxWidth {
+        display: none;
+    }
+    .minWidth {
+        display: none;
+    }
+    .phone {
+        display: inline;
+    }
+    .width input {
+        width: 97%;
+        height: 50px;
+    }
+    .mg {
+        width: 295px;
+    }
+    .mg1 {
+        margin-left: 50px;
+    }
+    .mg2 {
+        margin-left: 150px;
+    }
+    .mg3 {
+        margin-left: 130px;
+    }
+    .mg4 {
+        margin-left: 85px;
+    }
+    .mg5 {
+        margin-left: 139px;
+    }
+    .mgtop {
+        margin-top: -20px;
+    }
+}
+</style>
+    
+    <body>
+        <div class="icon"><img src="printa.png" alt="" /></div>
+        <div class="title">Анкета базового внедрения Битрикс24</div>
+    
+        <div class="maxWidth">
+            <form id="ajax-contact-form" action="1.php" method="POST" enctype="multipart/form-data">
+                <div class="all">
+                    <div class="question">1. Регистрация портала, приглашение сотрудников</div>
+                    <div class="question1-1">
+                        <div class="question1-1left subtext border star"><input type="text" name="1" required placeholder="Название Компании (кратко, для имени БД)" /></div>
+                        <div class="question1-1right right text">Название Компании.bitrix24.ru</div>
+                    </div>
+                    <div class="question1-1">
+                        <div class="question1-2left subtext border star"><input type="text" name="2" required placeholder="Количество сотрудников" /></div>
+                        <div class="question1-2right right text">
+                            <p>Заполните и загрузите данные сотрудников, форму для заполнения возьмите <a href="staff_example.xlsx" download>тут</a></p>
+                        </div>
+    
+                        <input type="file" multiple name="getFile" id="getFile" style="display: none;" />
+    
+                        <div class="margin-left">
+                            <div class="upload"><button type="button" onclick="document.getElementById('getFile').click()">Загрузить документы</button></div>
+                        </div>
+                    </div>
+    
+                    <div class="question">2. Клиентская база</div>
+                    <div class="flex">
+                        <div class="question2-1left text star2">Кто является основным клиентом</div>
+                        <p class="radio text"><input type="radio" value="Юридические лица" checked name="3" />Юридические лица</p>
+                        <p class="radio text"><input type="radio" value="Физические лица" name="3" />Физические лица</p>
+                        <p class="radio text"><input type="radio" value="Разные" name="3" />Разные</p>
+                    </div>
+    
+                    <div class="flex">
+                        <div class="text2 question2-3 star2">
+                            Какие данные клиентов <br />
+                            необходимо сохранить
+                        </div>
+                        <div class="checkbox1">
+                            <p class="text2"><input type="checkbox" name="6" value="Банковские реквизиты" />Банковские реквизиты</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Ответственные" />Ответственные</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Данные о сделках" />Данные о сделках</p>
+                        </div>
+                        <div class="checkbox1">
+                            <p class="text2">
+                                <input type="checkbox" name="6" value="Контактные данные" />Контактные<br />
+                                данные
+                            </p>
+                            <p class="text2"><input type="checkbox" name="6" value="Контактные данные ответственных" />Контактные данные ответственных</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Документы" />Документы</p>
+                        </div>
+                        <div class="middle">
+                            <p class="text maxbord"><input type="checkbox" name="6" value="Дни рождения ответственных или другая персональная информация" />Дни рождения ответственных или другая персональная информация</p>
+                        </div>
+                    </div>
+                    <div class="flex question2-4">
+                        <div class="question1-2left subtext border star"><input type="text" name="8" required placeholder="Где хранится текущая база клиентов?" /></div>
+                        <p class="text2 margin-left"><input type="radio" value="Перенос базы осуществляет интегратор" checked name="9" />Перенос базы осуществляет интегратор</p>
+                        <p class="text2 margin-left2">
+                            <input type="radio" value="Перенос базы клиент производит самостоятельно" name="9" />Перенос базы клиент производит<br />
+                            самостоятельно (по инструкции)
+                        </p>
+                    </div>
+    
+                    <div class="question">3. Фиксация обращений в компанию</div>
+                    <div class="flex">
+                        <div class="question2-1left text3 star2">
+                            Какие каналы коммуникации<br />
+                            использует компания?
+                        </div>
+                        <div class="radio2">
+                            <p class="text radio2">
+                                <input type="radio" value="Юридические лица" checked name="11" />Юридические лица <span class="mg1 subtext border"><input type="text" name="111" placeholder="Оператор IP телефонии" /></span>
+                            </p>
+                            <p class="text radio2"><input type="radio" value="Физические лица" name="11" />Физические лица</p>
+                            <p class="text radio2"><input type="radio" value="Разные" name="11" />Разные</p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="e-mail" />e-mail<span class="mg2 mg subtext border"><input type="text" name="15" placeholder="Корпоративный e-mail" /></span>
+                            </p>
+                            <p class="text radio2"><input type="checkbox" name="14" value="Чаты на сайтах" />Чаты на сайтах</p>
+                            <p class="text radio2"><input type="checkbox" name="14" value="Формы обратной связи" /> Формы обратной связи</p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="Соцсети" />Соцсети<span class="mg3 mg subtext border"><input type="text" name="16" placeholder="Напишите какие" /></span>
+                            </p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="Мессенджеры" />Мессенджеры<span class="mg4 mg subtext border"><input type="text" name="17" placeholder="Напишите какие" /></span>
+                            </p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="36" /> Другое<span class="mg5 mg subtext border"><input type="text" name="18" placeholder="Напишите какие" /></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question1-1left3 middle subtext border subtext border width"><input type="text" name="19" placeholder="Укажите кто будет отвечать в каналах (Отделы, сотрудники)" /></div>
+                    <br />
+                    <div class="question1-1left3 subtext border subtext border width">
+                        <input type="text" name="20" placeholder="Укажите кто будет предоставлять интегратору информацию о доступах к каналам связи (Контактное лицо, телефон, почта)" />
+                    </div>
+    
+                    <div class="text checkbox1-3">
+                        Понадобится доступ к аккаунтам подключаемых каналов. Для это нужно либо выдать данные интегратору, либо договориться об участии сотрудников, которые в нужный момент введут необходимые сведения для подключения.
+                    </div>
+                    <div class="question">3. Системный процесс продаж</div>
+                    <div class="question1-1left3 middle subtext border subtext border width star">
+                        <input type="text" name="21" required placeholder="Какие этапы в процессе продаж важно контролировать (перечислите через запятую), например: Подготовка КП, Выставление счета, Создание сделки и т. д." />
+                    </div>
+                    <div class="question1-1left3 middle subtext border subtext border width">
+                        <input type="text" name="22" placeholder="Есть ли разделение зон ответственности в процессе продаж? Если да, то на каких этапах и между какими сотрудниками (отделами)" />
+                    </div>
+                    <div class="question1-1left3 middle subtext border subtext border width star">
+                        <input type="text" name="23" required placeholder="Какие документы используются в процессе продаж? Есть ли специфические документы (свои типы заявок, КП и т. д.), Загрузите примеры документов" />
+                    </div>
+                </div>
+    
+                <input type="file" multiple name="getFile2[]" id="getFile2[]" style="display: none;" />
+    
+                <div class="center">
+                    <div class="upload"><button type="button" onclick="document.getElementById('getFile2[]').click()">Загрузить документы</button></div>
+                </div>
+    
+                <div class="all">
+                    <div class="question">4. Контактные данные</div>
+                    <div class="question1-1 flex">
+                        <div class="subtext border width5 star"><input type="text" name="24" placeholder="Анкету заполнил (ФИО)" /></div>
+                        <div class="question1-2left subtext margin-left border star"><input type="text" name="25" placeholder="e-mail" /></div>
+                        <div class="question1-2left subtext border margin-left star"><input type="text" name="26" placeholder="Телефон" /></div>
+                    </div>
+                    <div class="flex">
+                        <p><input type="radio" id="pole" name="27" required value="37" /></p>
+                        <p>
+                            Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                            <a href="#win1">Согласии на обработку персональных данных</a>*
+                        </p>
+                    </div>
+                </div>
+    
+                <a href="#x" class="overlay" id="win1"></a>
+                <div class="popup">
+                    <div class="title">Согласие на обработку персональных данных</div>
+                    <div class="text">
+                        <p>
+                            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ООО
+                            "АЙДА ПРИНТ" (ОГРН 1135476133627, ИНН 5405481125), зарегистрированным в соответствии с законодательством РФ по адресу: <br />
+                            ДИМИТРОВА, ДОМ 18, ЭТАЖ 1, ПОМЕЩЕНИЕ 15, НОВОСИБИРСК, НОВОСИБИРСКАЯ ОБЛАСТЬ, Россия, 630099 (далее по тексту - Оператор). Персональные данные - любая информация, относящаяся к определенному или определяемому на
+                            основании такой информации физическому лицу. <br />
+                            Настоящее Согласие выдано мною на обработку следующих персональных данных: <br />
+                            - Имя;<br />
+                            - Фамилия;<br />
+                            - Название компании;<br />
+                            - Телефон;<br />
+                            - E-mail;<br />
+                            - Комментарий. <br />
+                            <br />
+    
+                            Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение,
+                            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий, предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными
+                            способами. <br />
+                            Данное согласие дается Оператору для обработки моих персональных данных в следующих целях: <br />
+                            - предоставление мне услуг/работ; <br />
+                            - направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ; <br />
+                            - подготовка и направление ответов на мои запросы; <br />
+                            - направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах Оператора. <br />
+                            <br />
+                            Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на электронный адрес nick@printa.su. В случае отзыва мною согласия на обработку персональных данных Оператор вправе
+                            продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных
+                            данных» от 27.07.2006 г.
+                        </p>
+                    </div>
+                    <a class="close" title="Закрыть" href="#close"></a>
+                    <div class="flex">
+                        <div class="center">
+                            <div class="upload2">
+                                <a href="#close"><button type="button" id="test">Согласен</button></a>
+                            </div>
+                        </div>
+                        <div class="upload3 center">
+                            <a href="#close"><button type="button" id="test2">Не согласен</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="upload2"><button type="submit">Отправить анкету</button></div>
+                </div>
+            </form>
+        </div>
+    
+        <div class="minWidth">
+            <form id="ajax-contact-form" action="1.php" method="POST" enctype="multipart/form-data">
+                <div class="all">
+                    <div class="question">1. Регистрация портала, приглашение сотрудников</div>
+                    <div class="question1-1">
+                        <div class="question1-1left subtext border star"><input type="text" name="1" required placeholder="Название Компании (кратко, для имени БД)" /></div>
+                        <div class="question1-1right right text">Название Компании.bitrix24.ru</div>
+                    </div>
+                    <div class="question1-1">
+                        <div class="question1-2left subtext border star"><input type="text" name="2" required placeholder="Количество сотрудников" /></div>
+                        <div class="question1-2right right text">
+                            <p>Заполните и загрузите данные сотрудников, форму для заполнения возьмите <a href="images/xxx.jpg" download>тут</a></p>
+                        </div>
+    
+                        <input type="file" multiple name="getFile" id="getFile" style="display: none;" />
+    
+                        <div class="margin-left">
+                            <div class="upload"><button type="button" onclick="document.getElementById('getFile').click()">Загрузить документы</button></div>
+                        </div>
+                    </div>
+    
+                    <div class="question">2. Клиентская база</div>
+                    <div class="flex">
+                        <div class="question2-1left text star2">Кто является основным клиентом</div>
+                        <p class="radio text"><input type="radio" value="Юридические лица" checked name="3" />Юридические лица</p>
+                        <p class="radio text"><input type="radio" value="Физические лица" name="3" />Физические лица</p>
+                        <p class="radio text"><input type="radio" value="Разные" name="3" />Разные</p>
+                    </div>
+    
+                    <div class="flex">
+                        <div class="text2 question2-3 star2">
+                            Какие данные клиентов <br />
+                            необходимо сохранить
+                        </div>
+                        <div class="checkbox1">
+                            <p class="text2"><input type="checkbox" name="6" value="Банковские реквизиты" />Банковские реквизиты</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Ответственные" />Ответственные</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Данные о сделках" />Данные о сделках</p>
+                        </div>
+                        <div class="checkbox1">
+                            <p class="text2">
+                                <input type="checkbox" name="6" value="Контактные данные" />Контактные<br />
+                                данные
+                            </p>
+                            <p class="text2"><input type="checkbox" name="6" value="Контактные данные ответственных" />Контактные данные ответственных</p>
+                            <p class="text2"><input type="checkbox" name="6" value="Документы" />Документы</p>
+                        </div>
+                        <div class="middle">
+                            <p class="text"><input type="checkbox" name="6" value="Дни рождения ответственных или другая персональная информация" />Дни рождения ответственных или другая персональная информация</p>
+                        </div>
+                    </div>
+                    <div class="flex question2-4">
+                        <div class="question1-2left subtext border star"><input type="text" name="8" required placeholder="Где хранится текущая база клиентов?" /></div>
+                        <p class="text2 margin-left"><input type="radio" value="Перенос базы осуществляет интегратор" checked name="9" />Перенос базы осуществляет интегратор</p>
+                        <p class="text2 margin-left2">
+                            <input type="radio" value="Перенос базы клиент производит самостоятельно" name="9" />Перенос базы клиент производит<br />
+                            самостоятельно (по инструкции)
+                        </p>
+                    </div>
+    
+                    <div class="question">3. Фиксация обращений в компанию</div>
+                    <div class="flex">
+                        <div class="question2-1left text3 star2">
+                            Какие каналы коммуникации<br />
+                            использует компания?
+                        </div>
+                        <div class="radio2">
+                            <p class="text radio2">
+                                <input type="radio" value="Юридические лица" checked name="11" />Юридические лица <span class="mg1 subtext border"><input type="text" name="111" placeholder="Оператор IP телефонии" /></span>
+                            </p>
+                            <p class="text radio2"><input type="radio" value="Физические лица" name="11" />Физические лица</p>
+                            <p class="text radio2"><input type="radio" value="Разные" name="11" />Разные</p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="e-mail" />e-mail<span class="mg2 mg subtext border"><input type="text" name="15" placeholder="Корпоративный e-mail" /></span>
+                            </p>
+                            <p class="text radio2"><input type="checkbox" name="14" value="Чаты на сайтах" />Чаты на сайтах</p>
+                            <p class="text radio2"><input type="checkbox" name="14" value="Формы обратной связи" /> Формы обратной связи</p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="Соцсети" />Соцсети<span class="mg3 mg subtext border"><input type="text" name="16" placeholder="Напишите какие" /></span>
+                            </p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="Мессенджеры" />Мессенджеры<span class="mg4 mg subtext border"><input type="text" name="17" placeholder="Напишите какие" /></span>
+                            </p>
+                            <p class="text radio2">
+                                <input type="checkbox" name="14" value="36" /> Другое<span class="mg5 mg subtext border"><input type="text" name="18" placeholder="Напишите какие" /></span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text3">Укажите кто будет отвечать в каналах (Отделы, сотрудники):</p>
+                    <div class="subtext border width"><input type="text" name="19" placeholder="Отделы, сотрудники" /></div>
+                    <p class="text3">Укажите кто будет предоставлять интегратору информацию о доступах к каналам связи (Контактное лицо, телефон, почта):</p>
+                    <div class="subtext border width"><input type="text" name="20" placeholder="Контактное лицо, телефон, почта" /></div>
+    
+                    <div class="text checkbox1-3 subtext border maxxwidth">
+                        Понадобится доступ к аккаунтам подключаемых каналов. Для это нужно либо выдать данные интегратору, либо договориться об участии сотрудников, которые в нужный момент введут необходимые сведения для подключения.
+                    </div>
+                    <div class="question">3. Системный процесс продаж</div>
+    
+                    <p class="text3">Какие этапы в процессе продаж важно контролировать (перечислите через запятую), например: Подготовка КП, Выставление счета, Создание сделки и т. д.</p>
+                    <div class="question1-1left3 subtext border subtext border width star"><input type="text" name="21" placeholder="Какие этапы?" /></div>
+    
+                    <p class="text3">Есть ли разделение зон ответственности в процессе продаж? Если да, то на каких этапах и между какими сотрудниками (отделами)</p>
+                    <div class="question1-1left3 subtext border subtext border width star"><input type="text" name="22" placeholder="Есть ли разделение?" /></div>
+    
+                    <p class="text3">Какие документы используются в процессе продаж? Есть ли специфические документы (свои типы заявок, КП и т. д.), Загрузите примеры документов</p>
+                    <div class="question1-1left3 subtext border subtext border width star"><input type="text" name="23" placeholder="Какие документы используются?" /></div>
+                </div>
+    
+                <input type="file" multiple name="getFile2[]" id="getFile2[]" style="display: none;" />
+    
+                <div class="center">
+                    <div class="upload"><button type="button" onclick="document.getElementById('getFile2[]').click()">Загрузить документы</button></div>
+                </div>
+    
+                <div class="all">
+                    <div class="question">4. Контактные данные</div>
+                    <div class="">
+                        <div class="subtext border width star"><input type="text" name="24" required placeholder="Анкету заполнил (ФИО)" /></div>
+                        <div class="subtext border width star"><input type="text" name="25" required placeholder="e-mail" /></div>
+                        <div class="subtext border width star"><input type="text" name="26 required" placeholder="Телефон" /></div>
+                    </div>
+                    <div class="flex">
+                        <p><input type="radio" id="pole" name="27" required value="37" /></p>
+                        <p class="maxxwidth">
+                            Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в
+                            <a href="#win1">Согласии на обработку персональных данных</a>*
+                        </p>
+                    </div>
+                </div>
+                <a href="#x" class="overlay" id="win1"></a>
+                <div class="popup">
+                    <div class="title">Согласие на обработку персональных данных</div>
+                    <div class="text">
+                        <p>
+                            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ООО
+                            "АЙДА ПРИНТ" (ОГРН 1135476133627, ИНН 5405481125), зарегистрированным в соответствии с законодательством РФ по адресу: <br />
+                            ДИМИТРОВА, ДОМ 18, ЭТАЖ 1, ПОМЕЩЕНИЕ 15, НОВОСИБИРСК, НОВОСИБИРСКАЯ ОБЛАСТЬ, Россия, 630099 (далее по тексту - Оператор). Персональные данные - любая информация, относящаяся к определенному или определяемому на
+                            основании такой информации физическому лицу. <br />
+                            Настоящее Согласие выдано мною на обработку следующих персональных данных: <br />
+                            - Имя;<br />
+                            - Фамилия;<br />
+                            - Название компании;<br />
+                            - Телефон;<br />
+                            - E-mail;<br />
+                            - Комментарий. <br />
+                            <br />
+    
+                            Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение,
+                            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий, предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными
+                            способами. <br />
+                            Данное согласие дается Оператору для обработки моих персональных данных в следующих целях: <br />
+                            - предоставление мне услуг/работ; <br />
+                            - направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ; <br />
+                            - подготовка и направление ответов на мои запросы; <br />
+                            - направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах Оператора. <br />
+                            <br />
+                            Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на электронный адрес nick@printa.su. В случае отзыва мною согласия на обработку персональных данных Оператор вправе
+                            продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных
+                            данных» от 27.07.2006 г.
+                        </p>
+                    </div>
+                    <a class="close" title="Закрыть" href="#close"></a>
+                    <div class="flex">
+                        <div class="center">
+                            <div class="upload2">
+                                <a href="#close"><button type="button" id="test">Согласен</button></a>
+                            </div>
+                        </div>
+                        <div class="upload3 center">
+                            <a href="#close"><button type="button" id="test2">Не согласен</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="upload2"><button type="submit">Отправить анкету</button></div>
+                </div>
+            </form>
+        </div>
+    
+        <div class="phone">
+            <form id="ajax-contact-form" action="1.php" method="POST" enctype="multipart/form-data">
+                <div class="all">
+                    <div class="question">1. Регистрация портала, приглашение сотрудников</div>
+                    <p class="text3">Название Компании.bitrix24.ru:</p>
+    
+                    <div class="subtext border width radio2 star"><input type="text" required name="1" placeholder="Название Компании (кратко)" /></div>
+                    <div class="subtext border width radio2 star"><input type="text" required name="2" placeholder="Количество сотрудников" /></div>
+                    <div class="text3">
+                        <p class="center2">Заполните и загрузите данные сотрудников, форму для заполнения возьмите <a href="images/xxx.jpg" download>тут</a></p>
+                    </div>
+    
+                    <input type="file" multiple name="getFile" id="getFile" style="display: none;" />
+    
+                    <div class="center">
+                        <div class="upload"><button type="button" onclick="document.getElementById('getFile').click()">Загрузить документы</button></div>
+                    </div>
+    
+                    <div class="question">2. Клиентская база</div>
+    
+                    <div class="question2-1left text middle star2"><p class="center2">Кто является основным клиентом</p></div>
+                    <p class="radio text"><input class="" type="radio" value="Юридические лица" checked name="3" />Юридические лица</p>
+                    <p class="radio text"><input type="radio" value="Физические лица" name="3" />Физические лица</p>
+                    <p class="radio text"><input type="radio" value="Разные" name="3" />Разные</p>
+    
+                    <div class="question2-1left text middle star2"><p class="center2">Какие данные клиентов необходимо сохранить</p></div>
+                    <div class="radio text">
+                        <p class="text2"><input type="checkbox" name="6" value="Банковские реквизиты" />Банковские реквизиты</p>
+                        <p class="text2 margin-left-mini"><input type="checkbox" name="6" value="Ответственные" />Ответственные</p>
+                    </div>
+                    <div class="radio text">
+                        <p class="text2">
+                            <input type="checkbox" name="6" value="Контактные данные" />Контактные<br />
+                            данные
+                        </p>
+                        <p class="text2 margin-left-mini"><input type="checkbox" name="6" value="Контактные данные ответственных" />Контактные данные ответственных</p>
+                    </div>
+                    <div class="radio text">
+                        <p class="text2"><input type="checkbox" name="6" value="Документы" />Документы</p>
+                        <p class="text2 margin-left-mini"><input type="checkbox" name="6" value="Данные о сделках" />Данные о сделках</p>
+                    </div>
+    
+                    <div class="radio text">
+                        <p class="text"><input type="checkbox" name="6" value="Дни рождения ответственных или другая персональная информация" />Дни рождения ответственных или другая персональная информация</p>
+                    </div>
+    
+                    <div class="subtext border width radio2 star"><input type="text" name="8" required placeholder="Где хранится текущая база клиентов?" /></div>
+                    <p class="radio text"><input type="radio" value="Перенос базы осуществляет интегратор" checked name="9" />Перенос базы осуществляет интегратор</p>
+                    <p class="radio text">
+                        <input type="radio" value="Перенос базы клиент производит самостоятельно" name="9" />Перенос базы клиент производит<br />
+                        самостоятельно (по инструкции)
+                    </p>
+    
+                    <div class="question">3. Фиксация обращений в компанию</div>
+    
+                    <div class="question2-1left text middle star2"><p class="center2">Какие каналы коммуникации использует компания?</p></div>
+                    <div class="radio2">
+                        <p class="text radio2"><input type="radio" value="Юридические лица" checked name="11" />Юридические лица</p>
+                        <p class="text radio2"><input type="radio" value="Физические лица" name="11" />Физические лица</p>
+                        <p class="text radio2"><input type="radio" value="Разные" name="11" />Разные</p>
+                        <div class="subtext border width mgtop"><input type="text" name="111" placeholder="Оператор IP телефонии" /></div>
+                        <p class="text radio2"><input type="checkbox" name="14" value="e-mail" />e-mail</p>
+                        <div class="subtext border width mgtop"><input type="text" name="15" placeholder="Корпоративный e-mail" /></div>
+                        <p class="text radio2"><input type="checkbox" name="14" value="Чаты на сайтах" />Чаты на сайтах</p>
+                        <p class="text radio2"><input type="checkbox" name="14" value="Формы обратной связи" /> Формы обратной связи</p>
+                        <p class="text radio2"><input type="checkbox" name="14" value="Соцсети" />Соцсети</p>
+                        <div class="subtext border width mgtop"><input type="text" name="16" placeholder="Напишите какие" /></div>
+                        <p class="text radio2"><input type="checkbox" name="14" value="Мессенджеры" />Мессенджеры</p>
+                        <div class="subtext border width mgtop"><input type="text" name="17" placeholder="Напишите какие" /></div>
+                        <p class="text radio2"><input type="checkbox" name="14" value="36" /> Другое</p>
+                        <div class="subtext border width mgtop"><input type="text" name="18" placeholder="Напишите какие" /></div>
+    
+                        <p class="text3">Укажите кто будет отвечать в каналах (Отделы, сотрудники):</p>
+                        <div class="subtext border width"><input type="text" name="19" placeholder="Отделы, сотрудники" /></div>
+                        <p class="text3">Укажите кто будет предоставлять интегратору информацию о доступах к каналам связи (Контактное лицо, телефон, почта):</p>
+                        <div class="subtext border width"><input type="text" name="20" placeholder="Контактное лицо, телефон, почта" /></div>
+    
+                        <div class="text checkbox1-3 subtext border maxxwidth">
+                            Понадобится доступ к аккаунтам подключаемых каналов. Для это нужно либо выдать данные интегратору, либо договориться об участии сотрудников, которые в нужный момент введут необходимые сведения для подключения.
+                        </div>
+                        <div class="question">3. Системный процесс продаж</div>
+    
+                        <p class="text3">Какие этапы в процессе продаж важно контролировать (перечислите через запятую), например: Подготовка КП, Выставление счета, Создание сделки и т. д.</p>
+                        <div class="question1-1left3 subtext border subtext border width star"><input type="text" name="21" placeholder="Какие этапы?" /></div>
+    
+                        <p class="text3">Есть ли разделение зон ответственности в процессе продаж? Если да, то на каких этапах и между какими сотрудниками (отделами)</p>
+                        <div class="question1-1left3 subtext border subtext border width"><input type="text" name="22" placeholder="Есть ли разделение?" /></div>
+    
+                        <p class="text3">Какие документы используются в процессе продаж? Есть ли специфические документы (свои типы заявок, КП и т. д.), Загрузите примеры документов</p>
+                        <div class="question1-1left3 subtext border subtext border width star"><input type="text" name="23" placeholder="Какие документы используются?" /></div>
+                    </div>
+    
+                    <input type="file" multiple name="getFile2[]" id="getFile2[]" style="display: none;" />
+    
+                    <div class="center">
+                        <div class="upload"><button type="button" onclick="document.getElementById('getFile2[]').click()">Загрузить документы</button></div>
+                    </div>
+    
+                    <div class="all">
+                        <div class="question">4. Контактные данные</div>
+                        <div class="radio2">
+                            <div class="subtext border width star"><input type="text" name="24" required placeholder="Анкету заполнил (ФИО)" /></div>
+                            <div class="subtext border width star"><input type="text" name="25" required placeholder="e-mail" /></div>
+                            <div class="subtext border width star"><input type="text" name="26" required placeholder="Телефон" /></div>
+                        </div>
+                        <div class="flex">
+                            <p><input type="radio" id="pole" name="27" required value="37" /></p>
+                            <p class="maxxwidth">
+                                Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
+                                определенных в <a href="#win1">Согласии на обработку персональных данных</a>*
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#x" class="overlay" id="win1"></a>
+                <div class="popup">
+                    <div class="title">Согласие на обработку персональных данных</div>
+                    <div class="text">
+                        <p>
+                            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных ООО
+                            "АЙДА ПРИНТ" (ОГРН 1135476133627, ИНН 5405481125), зарегистрированным в соответствии с законодательством РФ по адресу: <br />
+                            ДИМИТРОВА, ДОМ 18, ЭТАЖ 1, ПОМЕЩЕНИЕ 15, НОВОСИБИРСК, НОВОСИБИРСКАЯ ОБЛАСТЬ, Россия, 630099 (далее по тексту - Оператор). Персональные данные - любая информация, относящаяся к определенному или определяемому на
+                            основании такой информации физическому лицу. <br />
+                            Настоящее Согласие выдано мною на обработку следующих персональных данных: <br />
+                            - Имя;<br />
+                            - Фамилия;<br />
+                            - Название компании;<br />
+                            - Телефон;<br />
+                            - E-mail;<br />
+                            - Комментарий. <br />
+                            <br />
+    
+                            Согласие дано Оператору для совершения следующих действий с моими персональными данными с использованием средств автоматизации и/или без использования таких средств: сбор, систематизация, накопление, хранение,
+                            уточнение (обновление, изменение), использование, обезличивание, а также осуществление любых иных действий, предусмотренных действующим законодательством РФ как неавтоматизированными, так и автоматизированными
+                            способами. <br />
+                            Данное согласие дается Оператору для обработки моих персональных данных в следующих целях: <br />
+                            - предоставление мне услуг/работ; <br />
+                            - направление в мой адрес уведомлений, касающихся предоставляемых услуг/работ; <br />
+                            - подготовка и направление ответов на мои запросы; <br />
+                            - направление в мой адрес информации, в том числе рекламной, о мероприятиях/товарах/услугах/работах Оператора. <br />
+                            <br />
+                            Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления на электронный адрес nick@printa.su. В случае отзыва мною согласия на обработку персональных данных Оператор вправе
+                            продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в пунктах 2 – 11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных
+                            данных» от 27.07.2006 г.
+                        </p>
+                    </div>
+                    <a class="close" title="Закрыть" href="#close"></a>
+                    <div class="flex">
+                        <div class="center">
+                            <div class="upload2">
+                                <a href="#close"><button type="button" id="test">Согласен</button></a>
+                            </div>
+                        </div>
+                        <div class="upload3 center">
+                            <a href="#close"><button type="button" id="test2">Не согласен</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="upload2"><button type="submit">Отправить анкету</button></div>
+                </div>
+            </form>
+        </div>
+    </body>
+    
+    <script>
+        document.getElementById("test").onclick = function () {
+            document.getElementById("pole").checked = !0;
+        };
+        document.getElementById("test2").onclick = function () {
+            document.getElementById("pole").checked = 0;
+        };
+    </script>
+    
